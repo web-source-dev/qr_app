@@ -96,8 +96,7 @@ export const FormProvider = ({ children }) => {
   
           // Save new design
           const designQrResponse = await axios.post(
-            `
-            .${process.env.REACT_APP_BACKEND_URL}/dyn-qr/save-design-qr`,
+            `${process.env.REACT_APP_BACKEND_URL}/dyn-qr/save-design-qr`,
             submissionDataQr
           );
           setQrDesignId(designQrResponse.data.id);
